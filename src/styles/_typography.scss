@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-VariableFont_wght.ttf") format("truetype-variations");
+}
+
+@font-face {
+  font-family: "HeadingNow";
+  src: url("/fonts/HeadingNow-56Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("/icons/fonts/icomoon.eot?qnn39q");
+  src: url("/icons/fonts/icomoon.eot?qnn39q#iefix") format("embedded-opentype"),
+    url("/icons/fonts/icomoon.ttf?qnn39q") format("truetype"),
+    url("/icons/fonts/icomoon.woff?qnn39q") format("woff"),
+    url("/icons/fonts/icomoon.svg?qnn39q#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-polygon:before {
+  content: "\e911";
+}
+.icon-hidden:before {
+  content: "\e912";
+}
+.icon-ethereum .path1:before {
+  content: "\e913";
+  color: rgb(255, 255, 255);
+  opacity: 0.45;
+}
+.icon-ethereum .path2:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
+}
+.icon-ethereum .path3:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.45;
+}
+.icon-ethereum .path4:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
+}
+.icon-ethereum .path5:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+}
+.icon-bitcoin:before {
+  content: "\e918";
+}
+.icon-lock:before {
+  content: "\e910";
+}
+.icon-arrowSharp:before {
+  content: "\e90f";
+}
+.icon-postBox:before {
+  content: "\e900";
+}
+.icon-check:before {
+  content: "\e901";
+}
+.icon-star:before {
+  content: "\e90b";
+}
+.icon-balanceCircle:before {
+  content: "\e90e";
+}
+.icon-arrowPointing:before {
+  content: "\e902";
+}
+.icon-arrowSlider:before {
+  content: "\e903";
+}
+.icon-balance:before {
+  content: "\e904";
+}
+.icon-battery:before {
+  content: "\e905";
+}
+.icon-energy:before {
+  content: "\e906";
+}
+.icon-luck:before {
+  content: "\e907";
+}
+.icon-lvlUp:before {
+  content: "\e908";
+}
+.icon-openSea:before {
+  content: "\e90d";
+}
+.icon-repair:before {
+  content: "\e909";
+}
+.icon-speed:before {
+  content: "\e90a";
+}
+.icon-weight:before {
+  content: "\e90c";
+}
+.icon-close:before {
+  content: "\e91d";
+}

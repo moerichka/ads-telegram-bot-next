@@ -1,0 +1,61 @@
+@import "~/src/styles/mixins";
+
+.petTitle {
+  max-width: 20.5rem;
+  width: 100%;
+  height: 5.5rem;
+
+  position: relative;
+  z-index: 3;
+
+  .info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transform: rotate(-2deg);
+    .petTitle__icon {
+      position: relative;
+      width: 3rem;
+      height: 2.6rem;
+    }
+
+    .petTitle__name {
+      color: #fff;
+      font-size: 3.75rem;
+      font-family: Bangers;
+      font-weight: 400;
+      line-height: 140%;
+
+      text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+        2px 2px 0 #000;
+    }
+  }
+
+  .shape {
+    position: absolute;
+    z-index: 2;
+    left: 0rem;
+    top: -0.1rem;
+    width: 105%;
+    height: 100%;
+    background-color: #9947fe;
+    transform: rotate(-2deg) skew(-10deg);
+    clip-path: polygon(1.75% 5.7%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .shadow {
+    position: absolute;
+    z-index: 1;
+    left: -0.7rem;
+    top: 0.4rem;
+    width: 105%;
+    height: 100%;
+    background-color: hsla(0, 3%, 15%, 1);
+    transform: rotate(-2deg) skew(-10deg);
+    clip-path: polygon(1.75% 5.7%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}

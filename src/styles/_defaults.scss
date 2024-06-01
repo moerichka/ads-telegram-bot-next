@@ -1,0 +1,132 @@
+@import "variables";
+
+/* ---nullification--- */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: hsla(32, 100%, 66%, 1);
+  color: white;
+  line-height: 1;
+  font-size: 16px;
+  overflow-x: hidden;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  cursor: url("/images/common/lightning.svg") 0 0, auto;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  @media (max-width: 1800px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1700px) {
+    font-size: 13px;
+  }
+  @media (max-width: $bLaptop) {
+    font-size: 12px;
+  }
+  @media (max-width: $laptop) {
+    font-size: 11px;
+  }
+  @media (max-width: $bTablet) {
+    font-size: 11px;
+  }
+  @media (max-width: $ssTablet) {
+    font-size: 11px;
+  }
+  @media (max-width: 340px) {
+    font-size: 10px;
+  }
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+  cursor: url("/images/common/lightningPointer.svg") 0 0, auto;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: url("/images/common/lightningPointer.svg") 0 0, auto;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+label {
+  cursor: url("/images/common/lightningPointer.svg") 0 0, auto;
+}
+a {
+  cursor: url("/images/common/lightningPointer.svg") 0 0, auto;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+  pointer-events: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/* ::-webkit-scrollbar {display: none;} */
+/* ---end nullification--- */
+
+.link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}

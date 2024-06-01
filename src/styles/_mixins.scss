@@ -1,0 +1,105 @@
+@import "./variables";
+
+@mixin link() {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+@mixin desktop() {
+  @media (min-width: 760px) {
+    @content;
+  }
+}
+
+@mixin container() {
+  max-width: 91.5rem;
+  width: 100%;
+  padding-left: 3.25rem;
+  padding-right: 3.25rem;
+  margin: 0 auto;
+}
+
+@mixin smallContainer() {
+  max-width: 91.5rem;
+  width: 100%;
+  padding-left: 3.25rem;
+  padding-right: 3.25rem;
+  margin: 0 auto;
+}
+
+@mixin title() {
+  font-family: "HeadingNow";
+  font-size: 3.75rem;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: white;
+}
+
+@mixin description() {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 167%;
+  color: white;
+}
+
+@mixin textShadow($color: hsla(0, 3%, 15%, 1), $width: 0.25rem) {
+  text-shadow: -0 -0.25rem 0 $color, 0 -0.25rem 0 $color, -0 0.25rem 0 $color,
+    0 0.25rem 0 $color, -0.25rem -0 0 $color, 0.25rem -0 0 $color,
+    -0.25rem 0 0 $color, 0.25rem 0 0 $color, -0.0625rem -0.25rem 0 $color,
+    0.0625rem -0.25rem 0 $color, -0.0625rem 0.25rem 0 $color,
+    0.0625rem 0.25rem 0 $color, -0.25rem -0.0625rem 0 $color,
+    0.25rem -0.0625rem 0 $color, -0.25rem 0.0625rem 0 $color,
+    0.25rem 0.0625rem 0 $color, -0.125rem -0.25rem 0 $color,
+    0.125rem -0.25rem 0 $color, -0.125rem 0.25rem 0 $color,
+    0.125rem 0.25rem 0 $color, -0.25rem -0.125rem 0 $color,
+    0.25rem -0.125rem 0 $color, -0.25rem 0.125rem 0 $color,
+    0.25rem 0.125rem 0 $color, -0.1875rem -0.25rem 0 $color,
+    0.1875rem -0.25rem 0 $color, -0.1875rem 0.25rem 0 $color,
+    0.1875rem 0.25rem 0 $color, -0.25rem -0.1875rem 0 $color,
+    0.25rem -0.1875rem 0 $color, -0.25rem 0.1875rem 0 $color,
+    0.25rem 0.1875rem 0 $color, -0.25rem -0.25rem 0 $color,
+    0.25rem -0.25rem 0 $color, -0.25rem 0.25rem 0 $color,
+    0.25rem 0.25rem 0 $color, -0.25rem -0.25rem 0 $color,
+    0.25rem -0.25rem 0 $color, -0.25rem 0.25rem 0 $color,
+    0.25rem 0.25rem 0 $color;
+}
+@mixin textShadowSmall($color: hsla(0, 3%, 15%, 1)) {
+  text-shadow: -0 -0.125rem 0 $color, 0 -0.125rem 0 $color, -0 0.125rem 0 $color,
+    0 0.125rem 0 $color, -0.125rem -0 0 $color, 0.125rem -0 0 $color,
+    -0.125rem 0 0 $color, 0.125rem 0 0 $color, -0.0625rem -0.125rem 0 $color,
+    0.0625rem -0.125rem 0 $color, -0.0625rem 0.125rem 0 $color,
+    0.0625rem 0.125rem 0 $color, -0.125rem -0.0625rem 0 $color,
+    0.125rem -0.0625rem 0 $color, -0.125rem 0.0625rem 0 $color,
+    0.125rem 0.0625rem 0 $color, -0.125rem -0.125rem 0 $color,
+    0.125rem -0.125rem 0 $color, -0.125rem 0.125rem 0 $color,
+    0.125rem 0.125rem 0 $color, -0.125rem -0.125rem 0 $color,
+    0.125rem -0.125rem 0 $color, -0.125rem 0.125rem 0 $color,
+    0.125rem 0.125rem 0 $color;
+}
+@mixin textShadowLeft($color: hsla(0, 3%, 15%, 1)) {
+  text-shadow: -0 -0.25rem 0 $color, 0 -0.25rem 0 $color, -0 0.25rem 0 $color,
+    0 0.25rem 0 $color, -0.25rem -0 0 $color, 0.25rem -0 0 $color,
+    -0.25rem 0 0 $color, 0.25rem 0 0 $color, -0.0625rem -0.25rem 0 $color,
+    0.0625rem -0.25rem 0 $color, -0.0625rem 0.25rem 0 $color,
+    0.0625rem 0.25rem 0 $color, -0.25rem -0.0625rem 0 $color,
+    0.25rem -0.0625rem 0 $color, -0.25rem 0.0625rem 0 $color,
+    0.25rem 0.0625rem 0 $color, -0.125rem -0.25rem 0 $color,
+    0.125rem -0.25rem 0 $color, -0.125rem 0.25rem 0 $color,
+    0.125rem 0.25rem 0 $color, -0.25rem -0.125rem 0 $color,
+    -0.5rem -0.125rem 0 $color, -0.4rem -0.25rem 0 $color,
+    -0.4rem 0.25rem 0 $color, 0.25rem -0.125rem 0 $color,
+    -0.25rem 0.125rem 0 $color, -0.5rem 0.125rem 0 $color,
+    0.25rem 0.125rem 0 $color, -0.1875rem -0.25rem 0 $color,
+    0.1875rem -0.25rem 0 $color, -0.1875rem 0.25rem 0 $color,
+    0.1875rem 0.25rem 0 $color, -0.25rem -0.1875rem 0 $color,
+    0.25rem -0.1875rem 0 $color, -0.25rem 0.1875rem 0 $color,
+    0.25rem 0.1875rem 0 $color, -0.25rem -0.25rem 0 $color,
+    0.25rem -0.25rem 0 $color, -0.25rem 0.25rem 0 $color,
+    0.25rem 0.25rem 0 $color, -0.25rem -0.25rem 0 $color,
+    0.25rem -0.25rem 0 $color, -0.25rem 0.25rem 0 $color,
+    0.25rem 0.25rem 0 $color;
+}

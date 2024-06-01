@@ -1,0 +1,131 @@
+@import "~/src/styles/mixins";
+
+.egg {
+  position: relative;
+  z-index: 3;
+}
+.imageWrapper {
+  position: relative;
+  width: 29.6rem;
+  height: 39.8rem;
+  user-select: none;
+
+  @media (max-width: 830px) {
+    width: 32.27rem;
+    height: 43.45rem;
+  }
+  @media (max-width: 480px) {
+    width: 24.18rem;
+    height: 32.54rem;
+  }
+}
+
+.image {
+  width: 29.6rem;
+  height: 39.8rem;
+
+  @media (max-width: 830px) {
+    width: 32.27rem;
+    height: 43.45rem;
+  }
+  @media (max-width: 480px) {
+    width: 24.18rem;
+    height: 32.54rem;
+  }
+}
+
+.eggShape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(
+    6.15% 37%,
+    12.6% 24.2%,
+    23% 12.55%,
+    34.05% 4.8%,
+    43.85% 0.45%,
+    53.7% 0%,
+    61.35% 2.5%,
+    76.05% 11.65%,
+    89.25% 25.8%,
+    97.55% 47.7%,
+    100% 60.25%,
+    96.95% 75.8%,
+    88.95% 86.05%,
+    76.4% 95%,
+    63.2% 98.4%,
+    49.7% 100.7%,
+    35.6% 99.55%,
+    24.85% 95.9%,
+    13.8% 88.15%,
+    4.3% 78.1%,
+    0.3% 66.2%,
+    1.55% 50.45%
+  );
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.crack {
+  pointer-events: none;
+  width: 16.12419rem;
+  height: 13.11681rem;
+  animation: show 0.15s;
+}
+
+.counter {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: 480px) {
+    bottom: -1rem;
+  }
+}
+.value {
+  @include textShadow();
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  font-family: Bangers;
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  user-select: none;
+
+  @media (max-width: 480px) {
+    font-size: 4rem;
+  }
+}
+.counterBackground {
+  position: absolute;
+  z-index: 1;
+  width: 13.20756rem;
+  height: 7.90494rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: 480px) {
+    width: 11rem;
+    height: 7rem;
+  }
+}
+
+.kCount {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+  height: 6rem;
+}

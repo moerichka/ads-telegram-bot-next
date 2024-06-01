@@ -1,0 +1,103 @@
+@import "~/src/styles/mixins";
+
+.windowPart {
+  position: relative;
+  width: 100%;
+  height: 19.4rem;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  clip-path: polygon(0% 0%, 100% 0%, 98.65% 100.65%, 0.9% 100.3%);
+}
+
+.image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 430px) {
+    left: initial;
+    width: calc(100% + 4rem);
+    right: -4rem;
+  }
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-2deg);
+  left: 1.5rem;
+  z-index: 4;
+
+  color: white;
+  font-family: Bangers;
+  font-size: 5rem;
+  font-weight: 400;
+  max-width: 10rem;
+  @include textShadow();
+
+  @media (max-width: 640px) {
+    top: -4.5rem;
+    max-width: initial;
+  }
+  @media (max-width: 430px) {
+    font-size: 4rem;
+    left: 0rem;
+  }
+}
+
+.shadow {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  width: calc(100% + 0.6rem);
+  height: calc(100% + 0.6rem);
+  transform: translate(-50%, -50%);
+  background-color: hsla(0, 3%, 15%, 1);
+  clip-path: polygon(0% 0%, 100% 0%, 98.65% 100.65%, 0.9% 100.3%);
+}
+
+.chat {
+  position: absolute;
+  top: 2rem;
+  right: 15rem;
+  z-index: 4;
+  width: 18.75rem;
+  height: 8.25rem;
+
+  @media (max-width: 500px) {
+    width: 12rem;
+    height: 7rem;
+  }
+
+  @media (max-width: 430px) {
+    right: 11rem;
+  }
+}
+.text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  @include textShadowSmall;
+  z-index: 2;
+  color: white;
+  font-family: Bangers;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 120%;
+
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+    left: 60%;
+  }
+}

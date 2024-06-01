@@ -1,0 +1,126 @@
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(32, 100%, 64%, 0.7);
+}
+
+.modal {
+  position: absolute;
+  z-index: 3;
+  height: var(--height, 100vh);
+  width: 100%;
+  max-width: 77rem;
+  padding: 0 2rem;
+  overflow-y: scroll;
+  overflow-x: visible;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 61.375rem;
+  min-height: 34rem;
+  margin: 4.7rem 0;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  display: flex;
+}
+
+.innerContent{
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  min-height: 100%;
+  padding: 0 3rem;
+
+  @media (max-width: 640px) {
+    padding-top: 7rem;
+  }
+
+  @media (max-width: 370px) {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.bottomWrapper{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 99%;
+  gap: 2rem;
+}
+
+.close {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  width: 5.97238rem;
+  height: 5.69469rem;
+  z-index: 1000;
+}
+
+.backgroundShadow {
+  position: absolute;
+  background-color: hsla(0, 3%, 15%, 1);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 101%;
+  clip-path: polygon(
+    1.45% 5.05%,
+    50.15% 3.05%,
+    99.9% 1%,
+    98.7% 35.05%,
+    97.6% 73.95%,
+    100% 100%,
+    27.55% 99.45%,
+    0% 99.75%
+  );
+}
+
+.backgroundBorder {
+  position: absolute;
+  background-color: hsla(0, 3%, 15%, 1);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(
+    2.15% 3.4%,
+    50.1% 2.75%,
+    99.4% 2.15%,
+    98.65% 35.8%,
+    97.25% 74.55%,
+    98.65% 100.9%,
+    -0.35% 100.45%
+  );
+}
+
+.backgroundShape {
+  position: absolute;
+  background-color: hsla(267, 73%, 52%, 1);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(
+    2.65% 3.95%,
+    50.15% 3.2%,
+    98.95% 2.7%,
+    98.1% 35.7%,
+    96.65% 74.45%,
+    98.8% 99.45%,
+    0.45% 100.15%
+  );
+}

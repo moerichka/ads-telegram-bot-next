@@ -1,0 +1,225 @@
+@import "~/src/styles/mixins";
+
+.section {
+  position: relative;
+  width: 100%;
+  height: var(--height, 100vh);
+  min-height: 50.625rem;
+  overflow: hidden;
+  background-image: linear-gradient(142deg, #ffaf51 0%, #ff8413 100%);
+
+  @media (max-width: 830px) {
+    min-height: 80rem;
+  }
+  @media (max-width: 650px) {
+    min-height: 85rem;
+  }
+  @media (max-width: 480px) {
+    min-height: 75rem;
+  }
+}
+
+.container {
+  @include container();
+  position: relative;
+  height: 100%;
+  z-index: 2;
+
+  @media (max-width: 1240px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.mainTitle {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-2deg);
+
+  @media (max-width: 1220px) {
+    left: 3.25rem;
+  }
+  @media (max-width: 830px) {
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%) rotate(-2deg);
+  }
+  @media (max-width: 480px) {
+    top: 18%;
+    font-size: 0.8rem;
+  }
+  @media (max-width: 370px) {
+    font-size: 0.7rem;
+  }
+}
+
+.button {
+  position: absolute;
+  left: 0;
+  top: 75%;
+  transform: translateY(-50%) rotate(-2deg);
+
+  @media (max-width: 1220px) {
+    left: 3.25rem;
+  }
+  @media (max-width: 830px) {
+    top: initial;
+    bottom: 2rem;
+    transform: translateY(-50%) rotate(-2deg);
+  }
+  @media (max-width: 650px) {
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-2deg);
+  }
+  @media (max-width: 480px) {
+    white-space: nowrap;
+  }
+}
+
+.egg {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(28%, -40%);
+
+  @media (max-width: 1220px) {
+    left: initial;
+    right: 10rem;
+  }
+  @media (max-width: 830px) {
+    left: 50%;
+    right: initial;
+    top: 58%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.pseudoEgg {
+  position: absolute;
+  width: 29.6rem;
+  height: 39.8rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(28%, -40%);
+
+  @media (max-width: 1220px) {
+    left: initial;
+    right: 10rem;
+  }
+  @media (max-width: 830px) {
+    left: 50%;
+    right: initial;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    width: 32.27rem;
+    height: 43.45rem;
+  }
+  @media (max-width: 480px) {
+    width: 24.18rem;
+    height: 32.54rem;
+  }
+}
+
+.dots {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.beams {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 190rem;
+  height: 190rem;
+}
+
+.sharps {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  width: 100vw;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: 830px) {
+    display: none;
+  }
+}
+.sharpsTablet {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  width: 100vw;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: 830px) {
+    display: block;
+  }
+}
+
+.leaderBoard {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 50%;
+  transform: translate(140%, -10%) rotate(-2deg);
+  transition: 0.1s;
+
+  &:active {
+    transform: translate(calc(140% - 0.1rem), calc(-10% + 0.1rem)) rotate(-2deg);
+  }
+
+  @media (max-width: 1220px) {
+    transform: translateY(-50%) rotate(-2deg);
+    left: 3.25rem;
+    top: 30%;
+
+    &:active {
+      transform: translateY(calc(-50% - 0.1rem)) rotate(-2deg);
+    }
+  }
+
+  @media (max-width: 830px) {
+    top: initial;
+    left: initial;
+    bottom: 2.5rem;
+    right: 3.25rem;
+    transform: translateY(-50%) rotate(-2deg);
+  }
+  @media (max-width: 650px) {
+    bottom: initial;
+    right: initial;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-2deg);
+  }
+  @media (max-width: 480px) {
+    top: 36%;
+  }
+}
+
+.leaderBoardText {
+  font-size: 0.9rem;
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+}

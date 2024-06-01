@@ -1,0 +1,17 @@
+.team {
+    display: grid;
+    grid-template-columns: repeat(4, 21.5rem);
+    grid-template-rows: 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    @media (max-width: 1150px) {
+        grid-template-columns: repeat(2, 21.5rem);
+        grid-template-rows: 1fr 1fr;
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: 21.5rem;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}

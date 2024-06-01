@@ -1,0 +1,71 @@
+@import "~/src/styles/variables";
+
+.marquee {
+  height: 10rem;
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.track {
+  position: absolute;
+  display: flex;
+  left: 110%;
+  flex-direction: row;
+  align-items: center;
+  gap: 6.25rem;
+
+  &.reverse {
+    left: -10%;
+    flex-direction: row-reverse;
+  }
+}
+
+.media {
+  position: relative;
+
+  &.polygonS {
+    width: 12.77513rem;
+    height: 2.06313rem;
+  }
+  &.copaJoy {
+    width: 7.98444rem;
+    height: 4.73344rem;
+  }
+  &.alchemy {
+    width: 11.55263rem;
+    height: 2.44475rem;
+  }
+  &.exmo {
+    width: 12.20456rem;
+    height: 1.96513rem;
+  }
+  &.bitMart {
+    width: 10.61925rem;
+    height: 2.44563rem;
+  }
+  &.amgCup {
+    width: 9.8155rem;
+    height: 6.55294rem;
+  }
+  &.sbt {
+    width: 5.75356rem;
+    height: 5.75675rem;
+  }
+  &.idesam {
+    width: 10.11738rem;
+    height: 2.481rem;
+  }
+  &.tela2 {
+    width: 9.8125rem;
+    height: 12.25rem;
+  }
+  &.raceCup {
+    width: 9.89788rem;
+    height: 3.11488rem;
+  }
+  &.lBank {
+    width: 9.15444rem;
+    height: 1.99975rem;
+  }
+}

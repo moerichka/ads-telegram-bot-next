@@ -1,0 +1,65 @@
+.button {
+  font-size: 1rem;
+  position: relative;
+  z-index: 3;
+
+  &:active {
+    .content {
+      transform: translate(-0.5rem, 0.5rem);
+    }
+    .panel {
+      transform: translate(-0.5em, 0.5em) skew(-10deg);
+    }
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  font-family: Bangers;
+  font-size: 2.25rem;
+  padding: 1.4rem 4.75rem;
+  transition: 0.2s;
+
+  &.whiteOrange {
+    color: hsla(31, 100%, 53%, 1);
+  }
+  &.purpleWhite {
+    color: white;
+  }
+}
+
+.panel {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: skew(-10deg);
+  transition: 0.2s;
+
+  &.whiteOrange {
+    background-color: white;
+  }
+  &.purpleWhite {
+    background-color: hsla(267, 99%, 64%, 1);
+  }
+}
+
+.shadow {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: -0.5em;
+  bottom: -0.5em;
+  transform: skew(-10deg);
+
+  &.whiteOrange {
+    background-color: hsla(32, 100%, 50%, 1);
+  }
+  &.purpleWhite {
+    background-color: white;
+  }
+}

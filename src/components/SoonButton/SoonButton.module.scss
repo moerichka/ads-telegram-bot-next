@@ -1,0 +1,18 @@
+@import "~/src/styles/mixins";
+
+.wrapper {
+  position: relative;
+}
+.soon {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: Bangers;
+  font-weight: 400;
+  font-size: 1.8rem;
+
+  @include textShadowSmall;
+}

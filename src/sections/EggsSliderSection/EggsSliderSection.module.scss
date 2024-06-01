@@ -1,0 +1,46 @@
+.eggsSliderSection {
+  width: 100%;
+  padding: 8rem 0;
+  background-image: url("/images/backgrounds/eggsSliderSection.png");
+  background-size: cover;
+  height: fit-content;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+  color: black;
+  grid-template-columns: 50% 30%;
+
+  .eggsSliderSection__whatIsThis {
+    @media (max-width: 1050px) {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    @media (max-width: 650px) {
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    @media (max-width: 550px) {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}

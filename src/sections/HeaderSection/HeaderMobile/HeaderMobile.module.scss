@@ -1,0 +1,27 @@
+.mobileHeader {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  @media (max-width: 850px) {
+    padding: 2rem 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .mobileHeader__eggWrapper {
+      position: relative;
+      width: 2.5rem;
+      height: 3.375rem;
+    }
+
+    .mobileHeader__menuWrapper {
+      position: relative;
+      width: 2.375rem;
+      height: 2rem;
+    }
+  }
+}

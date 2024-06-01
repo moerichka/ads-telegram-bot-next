@@ -1,0 +1,96 @@
+@import "~/src/styles/variables";
+@import "~/src/styles/mixins";
+
+.checkboxWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.innerWrapper {
+  position: relative;
+  width: 1.5625rem;
+  min-width: 1.5625rem;
+  height: 1.5625rem;
+
+  .shape {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    width: 130%;
+    height: 130%;
+    transform: translate(-50%, -50%);
+    background-color: hsla(31, 97%, 56%, 1);
+    clip-path: polygon(9.1% 0%, 93.95% 18.2%, 96.95% 93.95%, 18.2% 90.9%);
+  }
+  .shadow {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    width: calc(130% + 0.3rem);
+    height: calc(130% + 0.3rem);
+    transform: translate(-50%, -50%);
+    background-color: hsla(0, 3%, 15%, 1);
+    clip-path: polygon(9.1% 0%, 93.95% 18.2%, 96.95% 93.95%, 18.2% 90.9%);
+  }
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4375rem;
+  outline: none;
+  position: relative;
+  z-index: 3;
+
+  &::before {
+    content: "\e901";
+    font-family: "icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    @include textShadowSmall();
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.4rem;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s;
+    opacity: 0;
+
+    @media (max-width: $ssTablet) {
+      font-size: 1rem;
+    }
+  }
+
+  &.checked {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+.label {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 1.25rem;
+  font-weight: 400;
+
+  & a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}

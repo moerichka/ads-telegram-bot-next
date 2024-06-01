@@ -1,0 +1,168 @@
+@import "~/src/styles/mixins";
+
+.place {
+  position: relative;
+  z-index: 10;
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0.5rem 2rem;
+  @media (max-width: 670px) {
+    width: 85%;
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
+  &.first {
+    padding: 0.5rem 2rem;
+    .background {
+      background-image: linear-gradient(247deg, #ffb800 0%, #ffe03f 100%);
+    }
+    .number {
+      font-size: 4.375rem;
+      @media (max-width: 670px) {
+        font-size: 3.28125rem;
+      }
+    }
+    .nickname {
+      font-size: 3.4375rem;
+      @media (max-width: 670px) {
+        font-size: 2.25rem;
+      }
+    }
+    .result {
+      font-size: 3.75rem;
+      @media (max-width: 670px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  &.second {
+    padding: 0.5rem 2rem;
+    .background {
+      background-image: linear-gradient(247deg, #c1bfcd 0%, #e8e6f3 100%);
+    }
+    .number {
+      font-size: 4.375rem;
+      @media (max-width: 670px) {
+        font-size: 3.28125rem;
+      }
+    }
+    .nickname {
+      font-size: 3.4375rem;
+      @media (max-width: 670px) {
+        font-size: 2.25rem;
+      }
+    }
+    .result {
+      font-size: 3.75rem;
+      @media (max-width: 670px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  &.third {
+    padding: 0.5rem 2rem;
+    .background {
+      background-image: linear-gradient(247deg, #ff5c00 0%, #ffa552 100%);
+    }
+    .number {
+      font-size: 4.375rem;
+      @media (max-width: 670px) {
+        font-size: 3.28125rem;
+      }
+    }
+    .nickname {
+      font-size: 3.4375rem;
+      @media (max-width: 670px) {
+        font-size: 2.25rem;
+      }
+    }
+    .result {
+      font-size: 3.75rem;
+      @media (max-width: 670px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+.background {
+  position: absolute;
+  z-index: 1;
+  left: -10%;
+  top: -10%;
+  width: 113%;
+  height: 110%;
+  background-image: linear-gradient(138deg, #b454ff 0%, #9a48ff 100%);
+  clip-path: polygon(9% 7.15%, 99.25% 5.7%, 97.2% 95.7%, 7.05% 95.7%);
+}
+.backgroundShape {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 114%;
+  height: 111%;
+  background-color: hsla(0, 3%, 15%, 1);
+  clip-path: polygon(6% -2.1%, 96.2% -1.05%, 94% 95.8%, 3.8% 96.85%);
+  @media (max-width: 750px) {
+    height: 114%;
+    width: 114.5%;
+  }
+  @media (max-width: 500px) {
+    height: 115%;
+    width: 115.5%;
+  }
+}
+.leftPart {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3.32rem;
+  @media (max-width: 500px) {
+    align-self: flex-start;
+  }
+}
+.number {
+  @include textShadow;
+  color: white;
+  font-family: Bangers;
+  font-size: 3.75rem;
+  font-weight: 400;
+  @media (max-width: 670px) {
+    font-size: 3.28125rem;
+  }
+}
+.nickname {
+  @include textShadow;
+  color: white;
+  font-family: Bangers;
+  font-size: 3.125rem;
+  font-weight: 400;
+  font-size: 3.4375rem;
+  @media (max-width: 670px) {
+    font-size: 2.25rem;
+  }
+}
+.result {
+  position: relative;
+  z-index: 2;
+  @include textShadow;
+  color: white;
+  font-family: Bangers;
+  font-size: 3.4375rem;
+  font-weight: 400;
+  @media (max-width: 670px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 500px) {
+    align-self: flex-end;
+  }
+}

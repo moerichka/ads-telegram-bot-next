@@ -1,0 +1,31 @@
+@import "~/src/styles/variables";
+@import "~/src/styles/mixins";
+
+.home {
+  overflow-x: hidden;
+}
+
+.cookieContainer {
+  @include container();
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  z-index: 12;
+}
+
+.cookie {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  @media (max-width: 1220px) {
+    margin: 0 3.25rem;
+    width: calc(100% - 3.25rem - 3.25rem);
+  }
+  @media (max-width: 370px) {
+    margin: 0 2rem;
+    width: calc(100% - 2rem - 2rem);
+  }
+}

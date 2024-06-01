@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+  min-height: 24rem;
+  height: 100%;
+  top: 4rem;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(4.9% 2.6%, 96.9% 1.05%, 95.2% 82.3%, 4.45% 86.45%);
+}
+
+.backgroundFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(267, 73%, 52%, 1);
+}
+.backgroundShape {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(4.2% 0.8%, 97.45% -2.1%, 95.7% 84.4%, 3.6% 88.8%);
+  background-color: hsla(0, 3%, 15%, 1);
+}
+
+.content {
+  position: relative;
+  padding: 5rem 4rem 3rem 3rem;
+  z-index: 3;
+  max-width: 53rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  row-gap: 1.5rem ;
+  transform: rotate(-1deg);
+  @media (max-width: 670px) {
+    padding: 5rem 6rem 10rem 3rem;
+    grid-template-columns: 1fr;
+    font-size: 1.875rem;
+  }
+  @media (max-width: 400px) {
+    padding: 5rem 4rem 10rem 3rem;
+    font-size: 1.625rem;
+  }
+}
